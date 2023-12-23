@@ -16,6 +16,12 @@ CREATE TABLE if not exists students(student_id INT NOT NULL AUTO_INCREMENT,
 	PRIMARY KEY (student_id)
 );
 
+
+SELECT COLUMN_NAME, DATA_TYPE
+ FROM INFORMATION_SCHEMA.COLUMNS
+ WHERE TABLE_NAME = 'students';
+
+
  ---------------------------------------------------------------------------------------------
  
  #mysqldump -h database-1.cpio2plcbiwx.us-east-1.rds.amazonaws.com -u admin -p --databases studentapp > studetapp_backup.sql
